@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        HAPPY NEW YEAR
+    </title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #222;
+
+     }
+     h1{
+        position: relative;
+        font-size: 4em;
+        font-weight:300;
+        letter-spacing: 0.05em;
+        text-align: center;
+     }
+     h1::before{
+        content: '';
+        position:absolute;
+        top:40px;
+        height: 8px;
+        width: calc(100% - 100px);
+        background: red;
+        transition: transform 0.5s;
+        transform-origin: left;
+        box-shadow: 0 0 5px #f00, 0 0 15px #f00, 0 0 30px #f00,0 0 60px #f00;
+
+
+     }
+     h1:hover::before{
+        transform-origin: right;
+        transform:scaleX(0);
+     }
+     h1 span{
+        position:absolute;
+        transition: 0.25s;
+        color:#f00;
+        text-shadow: 0 0 5px #f00, 0 0 15px #f00, 0 0 30px #f00,0 0 60px #f00;;
+
+
+     }
+     h1 span:nth-child(2){
+        transform: translateY(-70px);
+        color:#0f0;
+        text-shadow:0 0 25px #0f0,0 0 50px #0f0,0 0 70px #0f0,0 0 90px #0f0;
+        opacity:0;
+     }
+     h1:hover span:nth-child(1){
+        transform:translateY(70px);
+     }
+     h1:hover span:nth-child(2){
+        transform:translateY(0px);
+        opacity:10;
+     }
+     h1:hover span:nth-child(1){
+        opacity:0;
+     }
+    </style>
+
+</head>
+<body>
+    <h1>WISH YOU A HAPPY NEW YEAR 202<span>2</span><span>3</span></h1>
+</body>
